@@ -63,7 +63,7 @@ const Profile = () => {
       <div className="container">
         <BtnBack />
         <form onSubmit={updateText} className={styles.form}>
-          <h4 style={{textAlign: 'center'}}>ЗаповнІть поля для зміни даних користувача</h4>
+          <h4 style={{textAlign: 'center'}}>Заповніть поля для зміни даних користувача</h4>
 
           <div className={styles.item}>
             <label>

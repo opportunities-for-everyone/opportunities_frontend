@@ -9,6 +9,7 @@ interface FormData {
   firstName: string;
   lastName: string;
   middleName: string,
+  position: string,
   email: string;
   password: string;
   repeatPassword: string;
@@ -27,6 +28,7 @@ const Registration = () => {
       formData.append('firstName', data.firstName);
       formData.append('lastName', data.lastName);
       formData.append('middleName', data.middleName);
+      formData.append('position', data.position);
       formData.append('email', data.email);
       formData.append('password', data.password);
       formData.append('repeatPassword', data.password);
@@ -73,6 +75,15 @@ const Registration = () => {
               />
               {errors.middleName && <span>{errors.middleName.message}</span>}
             </label>
+
+            <label className={styles.label}>
+              <h6 className={styles.formTitle}>Посада</h6>
+              <input className={styles.formInput} placeholder="Менеджер"  type="text"
+              {...register('position', { required: 'Заповніть це поле' })}
+              />
+              {errors.middleName && <span>{errors.middleName.message}</span>}
+            </label>
+            
             <label className={styles.label}>
               <h6 className={styles.formTitle}>Пароль</h6>
               <input className={styles.formInput}  type="password"
