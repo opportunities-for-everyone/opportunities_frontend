@@ -10,7 +10,7 @@ import {
 
 // Створення базового запиту
 const baseQuery = fetchBaseQuery({
-  baseUrl: import.meta.env.VITE_RENDER_API_BASE_URL,
+  baseUrl: env.VITE_RENDER_API_BASE_URL,
   prepareHeaders: (headers, { getState, endpoint }) => {
     // Перелік endpoint, які не вимагають авторизації
     const skipAuthEndpoints = [
