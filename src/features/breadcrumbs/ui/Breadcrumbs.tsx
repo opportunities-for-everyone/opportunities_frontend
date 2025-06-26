@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
 
     return (
       <div className={styles.crumb}>
-        <Link to={currentLink}>{crumb}</Link>
+        <Link to={currentLink}>{crumb[0].toUpperCase() + crumb.slice(1)}</Link>
       </div>
     )
   })

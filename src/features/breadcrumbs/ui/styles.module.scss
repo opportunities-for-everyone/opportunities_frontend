@@ -1,6 +1,7 @@
 .breadcrumbs {
   max-width: 1200px;
   margin: 20px auto;
+  margin-top: -30px;
 }
 .breadcrumbs > * {
   display: inline-block;
@@ -14,5 +15,5 @@
   display: none;
 }
 .breadcrumbs .crumb a{
-  color: #ddd;
+  color: #000;
 }
