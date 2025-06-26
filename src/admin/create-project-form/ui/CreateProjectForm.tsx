@@ -10,6 +10,7 @@ const CreateProjectForm: React.FC = () => {
   const [goalAmount, setGoalAmount] = useState<number>();
   const [deadline, setDeadline] = useState<string>('');
   const [image, setImage] = useState<File | null>(null);
+  console.log('create')
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -33,6 +34,7 @@ const CreateProjectForm: React.FC = () => {
 
     try {
       // .then(newNews => onSetNews(currentNews => [...currentNews, newNews])
+      console.log(formData)
       await createProject(formData).unwrap();
       alert('Project was succesfully added');
       setName('');
@@ -41,6 +43,7 @@ const CreateProjectForm: React.FC = () => {
       setDeadline('');
       setImage(null);
     } catch (error) {
+      console.log(error)
       alert(`Щось пішло не так: ${(error as any).data.error}`);
     }
   }

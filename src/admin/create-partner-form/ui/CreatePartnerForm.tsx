@@ -30,7 +30,6 @@ const CreateFormPartner = () => {
   const { control, register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormData>();
 
   const [submitForm, { isLoading }] = useCreatePartnerMutation();
-
   const onSubmit = async (data: FormData) => {
     try {
       const formData = new FormData();
@@ -49,7 +48,6 @@ const CreateFormPartner = () => {
         formData.append('logo', data.logo[0]); // Звертаємо увагу, що avatar — масив файлів
       }
       // Відправка даних через RTK Query
-      console.log(formData);
       await submitForm(formData).unwrap();
 
       alert('Партнер був успішно доданий')
