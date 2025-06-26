@@ -3,7 +3,7 @@ import Select from 'react-select';
 import styles from './styles.module.scss';
 import { SendFormBtn } from '@/features/send-form';
 import { useCreatePartnerMutation } from '@/widgets/parters/api/api';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 interface FormData {
   partnerName: string;
@@ -61,8 +61,8 @@ const CreateFormPartner = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
         <div className={styles.content}>
+          <Breadcrumbs/>
           <h4 className={styles.title}>Заповніть форму щоб створити партнера</h4>
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <label className={styles.label}>

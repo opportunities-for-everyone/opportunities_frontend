@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import { useState } from 'react';
 import { useCreateProjectMutation } from '@/widgets/projects/api/api';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const CreateProjectForm: React.FC = () => {
   const [createProject] = useCreateProjectMutation();
@@ -46,7 +47,8 @@ const CreateProjectForm: React.FC = () => {
 
   return (
     <section className={styles.section}>
-    <div className="container">
+      <div className="container">
+        <Breadcrumbs />
         <form onSubmit={handleSubmit} className={styles.form}>
           <h4>Fill in for create Project</h4>
         <div className={styles.item}>

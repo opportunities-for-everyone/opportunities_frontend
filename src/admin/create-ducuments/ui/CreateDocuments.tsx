@@ -1,8 +1,8 @@
 import { useForm, Controller } from 'react-hook-form';
 import Select from 'react-select';
 import styles from './styles.module.scss';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
 import { useCreateDocumentMutation } from '../../documents-list/api/docupentsApi';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 interface FormData {
   fileName: string,
@@ -43,8 +43,8 @@ const CreateDocuments = () => {
   return ( 
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
         <div className={styles.content}>
+          <Breadcrumbs />
           <h4 className={styles.title}>Заповніть форму щоб додати документ</h4>
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <label className={styles.label}>
