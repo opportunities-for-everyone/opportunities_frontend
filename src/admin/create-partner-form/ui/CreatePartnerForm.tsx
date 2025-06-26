@@ -49,11 +49,13 @@ const CreateFormPartner = () => {
         formData.append('logo', data.logo[0]); // Звертаємо увагу, що avatar — масив файлів
       }
       // Відправка даних через RTK Query
+      console.log(formData);
       await submitForm(formData).unwrap();
 
       alert('Партнер був успішно доданий')
       reset();
     } catch (error) {
+      console.log(error);
       alert(`Щось пішло не так: ${(error as any).data.error}`);
     }
   };
