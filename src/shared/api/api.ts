@@ -19,7 +19,6 @@ const baseQuery = fetchBaseQuery({
       'getProjects',
       'getProjectsActive',
       'becameVolunteer',
-      'createProject',
       'becamePartner',
       'register',
       'getPartners',
