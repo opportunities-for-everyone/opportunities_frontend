@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from './styles.module.scss';
-import BtnBack from "@/shared/ui/button-back/ui/BtnBack";
 import { useUpdateUserContentMutation, useUpdateUserCoverImageMutation } from "../api/profile-api";
+import { Breadcrumbs } from "@/features/breadcrumbs";
 
 const Profile = () => {
   const [updateContent, {isLoading}] = useUpdateUserContentMutation();
@@ -61,7 +61,7 @@ const Profile = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
+        <Breadcrumbs/>
         <form onSubmit={updateText} className={styles.form}>
           <h4 style={{textAlign: 'center'}}>Заповніть поля для зміни даних користувача</h4>
 

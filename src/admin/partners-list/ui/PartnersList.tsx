@@ -6,7 +6,7 @@ import { Partner, useGetPendingPartnersQuery, useUpdatePartnerStatusMutation } f
 import pencil from '@/shared/assets/images/icons/pencil.svg';
 import details from '@/shared/assets/images/icons/details.png';
 import { Modal } from '@/admin/modal';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const PartnersList = () => {
   const [activeRow, setActiveRow] = useState(0);
@@ -62,8 +62,8 @@ const PartnersList = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs/>
         <h1 className={styles.title}>Партнери</h1>
         {data?.content ? (<table className={styles.table}>
         <thead>

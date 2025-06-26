@@ -3,9 +3,9 @@ import styles from './styles.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
 import delet from '@/shared/assets/images/icons/delete.png';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
 import { Document, useDeleteDocumentMutation, useGetFoundingsQuery, useGetReportsQuery } from '../api/docupentsApi';
 import { useNavigate } from 'react-router-dom';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 export const DocumentsList = () => {
   const [activeRow, setActiveRow] = useState(100);
@@ -36,8 +36,8 @@ export const DocumentsList = () => {
   return (
     <div className={styles.section}>
     <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs/>
           <h1 className={styles.title}>Звіти</h1>
         {reportData ? (<table className={styles.table}>
         <thead>

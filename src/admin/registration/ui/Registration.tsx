@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 import { SendFormBtn } from "@/features/send-form";
 import { useForm } from "react-hook-form";
 import { useRegisterMutation } from "@/shared/api/api";
+import { Breadcrumbs } from "@/features/breadcrumbs";
 
 interface FormData {
   firstName: string;
@@ -50,6 +51,7 @@ const Registration = () => {
     <section className={styles.section}>
       <div className="container">
         <BtnBack />
+        <Breadcrumbs />
         <div className={styles.content}>
           <h4 className={styles.title}>Заповніть дані щоб зареєструватися</h4>
           <form className={styles.form}  onSubmit={handleSubmit(onSubmit)}>
@@ -81,7 +83,7 @@ const Registration = () => {
               <input className={styles.formInput} placeholder="Менеджер"  type="text"
               {...register('position', { required: 'Заповніть це поле' })}
               />
-              {errors.middleName && <span>{errors.middleName.message}</span>}
+              {errors.position && <span>{errors.position.message}</span>}
             </label>
             
             <label className={styles.label}>

@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import pencil from '@/shared/assets/images/icons/pencil.svg';
 import delet from '@/shared/assets/images/icons/delete.png';
 import details from '@/shared/assets/images/icons/details.png';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 export const formatDate = (dateString: string) => {
   const date = new Date(dateString); // Перетворюємо строку у дату
@@ -58,8 +58,8 @@ export const NewsList = () => {
   return (
     <div className={styles.section}>
     <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs/>
         <h1 className={styles.title}>Новини</h1>
         {news ? (<table className={styles.table}>
         <thead>

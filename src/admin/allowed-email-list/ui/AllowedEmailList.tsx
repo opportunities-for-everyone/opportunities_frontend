@@ -2,8 +2,8 @@ import styles from './styles.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
 import delet from '@/shared/assets/images/icons/delete.png';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
 import { AllowedEmail, useCreateAllowedEmailMutation, useDeleteEmailMutation, useGetEmailQuery } from '../api/allowedEmailApi';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const options = [
   { value: 'ROLE_SUPER_ADMIN', label: 'Супер адмін' },
@@ -60,8 +60,8 @@ const AllowedEmailList = () => {
   return ( 
     <div className={styles.section}>
     <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs />
         <h1 className={styles.title}>Дозволені пошти для співробітників</h1>
         {data ? (<table className={styles.table}>
         <thead>

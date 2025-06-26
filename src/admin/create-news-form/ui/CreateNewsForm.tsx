@@ -1,7 +1,7 @@
 import { useCreateNewsMutation } from '@/widgets/news/api/api';
 import styles from './styles.module.scss';
 import { useState } from 'react';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const CreateNewsForm: React.FC = () => {
   const [createNews, {isLoading}] = useCreateNewsMutation();
@@ -41,7 +41,7 @@ const CreateNewsForm: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
+        <Breadcrumbs/>
         <form onSubmit={handleSubmit} className={styles.form}>
           <h4 style={{textAlign: 'center'}}>Заповніть всі поля щоб добавити новину</h4>
         <div className={styles.item}>

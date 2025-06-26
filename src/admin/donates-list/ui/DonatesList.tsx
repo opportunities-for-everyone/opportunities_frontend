@@ -1,8 +1,8 @@
 import styles from './styles.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
 import { Donate, useGetDonatesQuery } from "../api/donates-api";
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const DonatesList = () => {
   const [activeRow, setActiveRow] = useState(0);
@@ -15,8 +15,8 @@ const DonatesList = () => {
   return (
     <div className={styles.section}>
     <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs />
         <h1 className={styles.title}>Донати</h1>
         {data ? (<table className={styles.table}>
         <thead>
