@@ -66,9 +66,10 @@ export const ProjectsList = () => {
   return (
     <section className={styles.section}>
     <div className="container">
-        <Breadcrumbs />
         
-      <div className={styles.content}>
+        
+        <div className={styles.content}>
+          <Breadcrumbs />
         <h1 className={styles.title}>Проєкти</h1>
         {projects ? (<table className={styles.table}>
         <thead>
