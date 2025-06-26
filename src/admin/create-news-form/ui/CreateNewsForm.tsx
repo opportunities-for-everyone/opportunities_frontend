@@ -28,6 +28,7 @@ const CreateNewsForm: React.FC = () => {
     formData.append("coverImage", coverImage);
 
     try {
+      console.log(formData, formData.values())
       await createNews(formData).unwrap();
       alert('Новина була успішно додана');
       setTitle('');

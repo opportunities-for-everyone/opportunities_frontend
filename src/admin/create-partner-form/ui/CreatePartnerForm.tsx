@@ -30,7 +30,6 @@ const CreateFormPartner = () => {
   const { control, register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormData>();
 
   const [submitForm, { isLoading }] = useCreatePartnerMutation();
-
   const onSubmit = async (data: FormData) => {
     try {
       const formData = new FormData();
@@ -54,6 +53,7 @@ const CreateFormPartner = () => {
       alert('Партнер був успішно доданий')
       reset();
     } catch (error) {
+      console.log(error);
       alert(`Щось пішло не так: ${(error as any).data.error}`);
     }
   };
