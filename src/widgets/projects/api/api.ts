@@ -25,7 +25,7 @@ export const projectsApi = api.injectEndpoints({
     getProjectsActive: build.query<Data, { page: number; size: number }>({
       query: ({ page, size }) => `/public/projects/active?page=${page}&size=${size}`,
     }),
-    createProject: build.mutation<any, FormData>({
+    createProject: build.mutation<Project, FormData>({
       query: (formData) => ({
         url: '/admin/projects',
         method: 'POST',
