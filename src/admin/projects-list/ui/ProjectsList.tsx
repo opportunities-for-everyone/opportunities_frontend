@@ -8,7 +8,7 @@ import pencil from '@/shared/assets/images/icons/pencil.svg';
 import details from '@/shared/assets/images/icons/details.png';
 import { Modal } from "@/admin/modal";
 import { formatDate } from "@/admin/news-list/ui/NewsList";
-import BtnBack from "@/shared/ui/button-back/ui/BtnBack";
+import { Breadcrumbs } from "@/features/breadcrumbs";
 
 
 export const ProjectsList = () => {
@@ -66,7 +66,8 @@ export const ProjectsList = () => {
   return (
     <section className={styles.section}>
     <div className="container">
-      <BtnBack />
+        <Breadcrumbs />
+        
       <div className={styles.content}>
         <h1 className={styles.title}>Проєкти</h1>
         {projects ? (<table className={styles.table}>
