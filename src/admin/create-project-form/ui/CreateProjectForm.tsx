@@ -34,7 +34,7 @@ const CreateProjectForm: React.FC = () => {
 
     try {
       // .then(newNews => onSetNews(currentNews => [...currentNews, newNews])
-      console.log(formData)
+      console.log(formData.values(), formData.entries(), name, description, goalAmount.toString(), deadline.toString(), image)
       await createProject(formData).unwrap();
       alert('Project was succesfully added');
       setName('');
