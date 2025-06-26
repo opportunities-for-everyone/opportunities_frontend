@@ -2,8 +2,8 @@
 import styles from './styles.module.scss';
 import { useState } from 'react';
 import classNames from 'classnames';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
 import { useGetUsersQuery, User } from '../api/UsersApi';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 export const UsersList = () => {
   const [activeRow, setActiveRow] = useState('');
@@ -16,8 +16,8 @@ export const UsersList = () => {
   return (
     <div className={styles.section}>
     <div className="container">
-      <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs/>
         <h1 className={styles.title}>Користувачі</h1>
         {data ? (<table className={styles.table}>
         <thead>

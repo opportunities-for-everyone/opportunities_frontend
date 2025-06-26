@@ -2,7 +2,7 @@ import { useGetNewsItemQuery, useUpdateNewsCoverImageMutation, useUpdateNewsText
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from './styles.module.scss';
-import BtnBack from "@/shared/ui/button-back/ui/BtnBack";
+import { Breadcrumbs } from "@/features/breadcrumbs";
 
 const UpdateNewsForm = () => {
   const { id } = useParams();
@@ -60,7 +60,7 @@ const UpdateNewsForm = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
+        <Breadcrumbs/>
         {data ? (<form onSubmit={updateText} className={styles.form}>
           <h4 style={{textAlign: 'center'}}>Змініть поля щоб які ви хочете адаптувати</h4>
 

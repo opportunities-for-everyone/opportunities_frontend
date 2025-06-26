@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Modal } from '@/admin/modal';
 import pencil from '@/shared/assets/images/icons/pencil.svg';
 import details from '@/shared/assets/images/icons/details.png';
-import BtnBack from '@/shared/ui/button-back/ui/BtnBack';
+import { Breadcrumbs } from '@/features/breadcrumbs';
 
 const VolunteersList = () => {
   const [activeRow, setActiveRow] = useState(0);
@@ -71,8 +71,8 @@ const VolunteersList = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <BtnBack />
-      <div className={styles.content}>
+        <div className={styles.content}>
+          <Breadcrumbs/>
         <h1 className={styles.title}>Волонтери</h1>
         <div className={styles.buttonsList}>
           <h5>Виберіть яких волонтерів ви будете дивитись:</h5>
