@@ -41,7 +41,7 @@ const CreateProjectForm: React.FC = () => {
       setDeadline('');
       setImage(null);
     } catch (error) {
-      console.log(error.data, error.data.error, error)
+      console.log(error)
       alert(`Щось пішло не так: ${(error as any).data.error}`);
     }
   }
