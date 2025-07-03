@@ -6,6 +6,10 @@
 .content {
   margin-left: 100px;
   margin-top: -30px;
+
+  @include mixins.on-tablet {
+    margin-left: 60px;
+  }
 }
 
 .top {
@@ -13,10 +17,18 @@
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 64px;
+
+  @include mixins.on-tablet {
+    flex-direction: column-reverse;
+  }
 }
 
 .left {
   max-width: 620px;
+
+  @include mixins.on-tablet {
+    max-width: 100%;
+  }
 }
 .img {
   width: 100%;
@@ -32,6 +44,10 @@
   width: 510px;
   height: 704px;
   border: 1px solid gray;
+
+  @include mixins.on-tablet {
+    width: 100%;
+  }
 }
 
 .bottom {

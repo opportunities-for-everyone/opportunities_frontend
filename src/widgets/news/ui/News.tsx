@@ -26,6 +26,8 @@ const News = () => {
     });
   };
 
+  console.log(t);
+
   const settings = {
     infinite: false,
     slidesToShow: 1,
