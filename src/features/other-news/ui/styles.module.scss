@@ -3,6 +3,10 @@
   width: 510px;
   border-radius: 25px;
   padding: 48px 48px 64px 48px;
+
+  @include mixins.on-tablet {
+    width: 100%;
+  }
 }
 
 .title {

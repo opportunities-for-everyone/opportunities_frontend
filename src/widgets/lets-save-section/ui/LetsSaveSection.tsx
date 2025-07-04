@@ -2,6 +2,7 @@ import { VolntBtn } from '@/features/volunteer-button';
 import arrow from '../assets/images/MainArrow.png';
 import styles from './styles.module.scss';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const LetsSaveSection = () => {
   const { t } = useTranslation();
@@ -17,7 +18,9 @@ const LetsSaveSection = () => {
           </div>
         
           <div className={styles.left}>
-            <img src={arrow} alt="arrow" className={styles.img} />
+            <Link to="form/volunteer">
+              <img src={arrow} alt="arrow" className={styles.img} />
+            </Link>
           </div>
         </div>
       </section>

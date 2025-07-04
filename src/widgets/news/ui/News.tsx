@@ -14,19 +14,19 @@ import { Button } from '@/shared/ui/button';
 
 const News = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 650px)' });
-  const { t } = useTranslation();
+  const { t, i18n} = useTranslation();
   const [seeAll, setSeeAll] = useState(6);
   const { data, error, isLoading } = useGetNewsQuery({ page: 0, size: seeAll });
   const formatDate = (dateString: string) => {
     const date = new Date(dateString); // Перетворюємо строку у дату
-    return date.toLocaleDateString('uk-UA', {
+    return date.toLocaleDateString(i18n.language === 'uk' ? 'uk-UA': 'en-US', {
       day: 'numeric',    // День без нуля попереду
       month: 'long',     // Повна назва місяця
       year: 'numeric'    // Повний рік
     });
   };
 
-  console.log(t);
+  console.log(i18n.language);
 
   const settings = {
     infinite: false,

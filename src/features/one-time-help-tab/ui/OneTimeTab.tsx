@@ -95,7 +95,7 @@ const OneTimeTab = () => {
         </div>
       </div>
       
-      <input type="number" className={styles.tel} placeholder={t('formPhone')} value={tel} onChange={(e) => setTel(e.target.value)} />
+      <input type="number" className={styles.tel} placeholder="+380 xx xxx xxxx" value={tel} onChange={(e) => setTel(e.target.value)} />
       <div className={styles.agreement}>
         <input type="checkbox" className={styles.checkbox} onChange={(e) => setChecked(e.target.checked)}/>
         <p className={styles.agree}>

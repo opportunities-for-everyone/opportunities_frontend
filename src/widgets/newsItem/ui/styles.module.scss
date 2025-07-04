@@ -20,6 +20,12 @@
 
   @include mixins.on-tablet {
     flex-direction: column-reverse;
+    max-width: 72%;
+    margin-inline: auto;
+  }
+
+  @include mixins.on-phone {
+    max-width: 100%;
   }
 }
 
