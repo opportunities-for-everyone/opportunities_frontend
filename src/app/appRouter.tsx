@@ -41,9 +41,9 @@ const appRouter = createBrowserRouter([
       { path: "form/volunteer", element: <FormVolunteer /> },
       { path: "form/partner", element: <FormPartner /> },
       { path: "form/submit", element: <FormSubmit /> },
-      {path: "news/:id", element: <NewsItem />},
-      {path: "reports", element: <Reports/>},
-      {path: "foundings", element: <Foundings/>},
+      { path: "news/:id", element: <NewsItem />},
+      { path: "reports", element: <Reports/>},
+      { path: "foundings", element: <Foundings/>},
       {
         path: "admin",
         element: <ProtectedRoute />,
