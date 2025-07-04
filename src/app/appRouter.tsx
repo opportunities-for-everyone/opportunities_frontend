@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import BaseLayout from "./layouts/BaseLayout";
 import { MainPage } from "@/pages/main";
 import { Payment } from "@/pages/payment";
@@ -30,7 +30,7 @@ import { Reports } from "@/widgets/reports";
 import { Foundings } from "@/widgets/foundings";
 
 // import { NewsPage } from "@/pages/news";
-const appRouter = createHashRouter([
+const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <BaseLayout />,
@@ -41,9 +41,9 @@ const appRouter = createHashRouter([
       { path: "form/volunteer", element: <FormVolunteer /> },
       { path: "form/partner", element: <FormPartner /> },
       { path: "form/submit", element: <FormSubmit /> },
-      {path: "news/:id", element: <NewsItem />},
-      {path: "reports", element: <Reports/>},
-      {path: "foundings", element: <Foundings/>},
+      { path: "news/:id", element: <NewsItem />},
+      { path: "reports", element: <Reports/>},
+      { path: "foundings", element: <Foundings/>},
       {
         path: "admin",
         element: <ProtectedRoute />,

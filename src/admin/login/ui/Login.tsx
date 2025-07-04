@@ -35,11 +35,12 @@ const Login: React.FC = () => {
     }
   }, [token, navigate]);
 
-  const login = async () => {
+  const login = async (e: React.FormEvent) => {
+    e.preventDefault();
     try {
       await loginUser({email, password}).unwrap();
       dispatch(setSuperAdmin(email))
-      navigate("/admin");
+      // navigate("/admin");
     } catch (err) {
       alert('Попробуйте ще раз авторизуватись')
       console.log(err)
