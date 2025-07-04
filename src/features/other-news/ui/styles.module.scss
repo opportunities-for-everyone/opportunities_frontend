@@ -1,3 +1,5 @@
+@use '@/shared/styles/mixins.scss' as mixins;
+
 .content {
   border: 1px solid var(--text-color-black);
   width: 510px;
