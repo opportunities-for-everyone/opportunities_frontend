@@ -11,9 +11,10 @@ type Props = {
 }
 
 const Project: React.FC<Props> = ({ title, img, endTermin, collected, goalAmount, id }) => {
+  const { t, i18n } = useTranslation();
   const formatDate = (dateString: string) => {
     const date = new Date(dateString); // Перетворюємо строку у дату
-    return date.toLocaleDateString('uk-UA', {
+    return date.toLocaleDateString(i18n.language === 'uk' ? 'uk-UA': 'en-US', {
       day: 'numeric',    // День без нуля попереду
       month: 'long',     // Повна назва місяця
     });
@@ -33,7 +34,6 @@ const Project: React.FC<Props> = ({ title, img, endTermin, collected, goalAmount
       return `${amount} грн`;
     }
   }
-  const { t } = useTranslation();
 
   return ( 
     <div
