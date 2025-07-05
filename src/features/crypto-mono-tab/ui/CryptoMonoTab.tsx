@@ -7,7 +7,7 @@ type Props = {
 }
 const CryptoMonoTab: React.FC<Props> = ({ title }) => {
   const { t } = useTranslation();
-  
+
   return (
     <div className={styles.content}>
       <div className={styles.top}>
@@ -15,7 +15,9 @@ const CryptoMonoTab: React.FC<Props> = ({ title }) => {
         <h5 className={styles.subtitle}>{t('becameHero')}</h5>
       </div>
       <div className={styles.bottom}>
-        <div className={styles.code}></div>
+        <div className={styles.code}>
+          <img src={import.meta.env.VITE_MONO_LINK}></img>
+        </div>
         {/* <DoDeposBtn disabled={true} title={t('openLink')} /> */}
       </div>
     </div> );
