@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /login/
+Disallow: /registration/
 
 Sitemap: https://opportunities.org.ua/sitemap.xml
