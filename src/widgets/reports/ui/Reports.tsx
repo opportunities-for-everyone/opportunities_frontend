@@ -4,6 +4,7 @@ import { Document, useGetReportsQuery } from '@/admin/documents-list/api/docupen
 import { useTranslation } from 'react-i18next';
 import { translateText } from '@/shared/hooks/useDynamicTranslation';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Reports = () => {
   const { data, error, isLoading } = useGetReportsQuery({ page: 0, size: 50 });
@@ -35,6 +36,11 @@ const Reports = () => {
   if (!translatedReports.length) return <h3>Ще немає документів</h3>;
 
   return (
+    <>
+      <Helmet>
+        <title>Сторінка з звітами</title>
+        <meta name="description" content="Сторінка з звітами сайту Можливості для кожного." />
+      </Helmet>
     <section className={styles.section}>
       <div className="container">
         <BtnBack />
@@ -52,6 +58,7 @@ const Reports = () => {
         </div>
       </div>
     </section>
+    </>
   );
 }
  
