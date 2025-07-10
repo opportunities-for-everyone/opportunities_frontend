@@ -93,7 +93,7 @@ const resources = {
       oneTime: 'One-Time Assistance',
       monthly: 'Monthly Assistance',
       juridic: 'Legal Entities',
-      monobank: 'Our Monobank',
+      monobank: 'Recharge by QR code',
       crypto: 'Cryptocurrency',
       abroad: 'From Abroad',
       paymError: "Select donation amount and enter your mobile phone number.",
@@ -125,7 +125,7 @@ const resources = {
       swiftCode: 'Bank SWIFT Code:',
       addressComp: 'Company Address:',
 
-      doMono: 'Support Us Through Monobank',
+      doMono: 'Make a transfer using the QR code',
       openLink: 'Open Link',
 
       doCrypto: 'Support Us Through Cryptocurrency',
@@ -267,7 +267,7 @@ const resources = {
       oneTime: 'Разова допомога',
       monthly: 'Щомісячна допомога',
       juridic: 'Юридичні особи',
-      monobank: 'Наша monobaнка',
+      monobank: 'Поповнення по QR коду',
       crypto: 'Криптовалюта',
       abroad: 'З-за кордону',
       paymError: "Виберіть суму донату й введіть номер мобільно телефону",
@@ -299,7 +299,7 @@ const resources = {
       swiftCode: 'SWIFT Код банку:',
       addressComp: 'Адреса компанії:',
 
-      doMono: 'Підтримай нас через Monobank',
+      doMono: 'Зроби переказ по QR коду',
       openLink: 'Відкрити посилання',
 
       doCrypto: 'Підтримай нас через криптовалюту',

@@ -52,6 +52,9 @@
   aspect-ratio: 1/1;
   background-color: #fff;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include mixins.on-tablet {
     width: 181px;
