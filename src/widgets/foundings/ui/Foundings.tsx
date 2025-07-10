@@ -4,6 +4,7 @@ import { Document, useGetFoundingsQuery } from '@/admin/documents-list/api/docup
 import { useTranslation } from 'react-i18next';
 import { translateText } from '@/shared/hooks/useDynamicTranslation';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Foundings = () => {
   const { data, error, isLoading } = useGetFoundingsQuery({ page: 0, size: 50 });
@@ -35,6 +36,11 @@ const Foundings = () => {
   if (!translatedReports.length) return <h3>Ще немає документів</h3>;
 
   return (
+    <>
+      <Helmet>
+        <title>Сторінка з установчими документами</title>
+        <meta name="description" content="Сторінка з установчими документами сайту Можливості для кожного." />
+      </Helmet>
     <section className={styles.section}>
       <div className="container">
         <BtnBack />
@@ -51,7 +57,8 @@ const Foundings = () => {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
  

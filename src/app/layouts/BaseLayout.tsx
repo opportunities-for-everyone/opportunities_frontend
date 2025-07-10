@@ -4,13 +4,16 @@
 
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
+import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 
 function BaseLayout() {
-  // const { isDark } = useTheme();
   return (
     <div>
-      {/* className={`app ${isDark ? "dark" : "light"}`} */}
+      <Helmet>
+        <title>Головна сторінка</title>
+        <meta name="description" content="Головна сторінка сайту Можливості для кожного." />
+      </Helmet>
       <Header />
 
       
