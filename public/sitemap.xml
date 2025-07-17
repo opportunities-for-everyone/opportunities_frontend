@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://charity-app-frontend.onrender.com/</loc>
+    <loc>https://opportunities.org.ua/</loc>
     <lastmod>2025-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://charity-app-frontend.onrender.com/reports</loc>
+    <loc>https://opportunities.org.ua/reports</loc>
     <lastmod>2025-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://charity-app-frontend.onrender.com/foundings</loc>
+    <loc>https://opportunities.org.ua/foundings</loc>
     <lastmod>2025-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
